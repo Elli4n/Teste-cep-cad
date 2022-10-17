@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+}
+.conteiner{
+    display: flex;
+    height: 80%;
+    border: red solid 2px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+form {
+    border: blue solid 2px;
+    padding: 8px;
+}
+
+.linha1 input {
+    width: 80%;
+}
+.linha2{
+    display: flex;
+    font-size: 80%;
+}
+.colunasenha {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.colunac_senha {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+label {
+    font-size: 60%;
+}

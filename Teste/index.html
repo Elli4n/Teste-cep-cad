@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <div class="usuario-conteudo">
+            <h1>Cadastro de Usuários</h1>
+            <form name="form1" onsubmit="Cadastrar()" method="get">
+             <div class="linha1">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome do Usuário" maxlength="50" required>
+             </div>
+            <div class="linha2">
+                <div class="colunasenha">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" class="form-control" placeholder="Informe sua senha" maxlength="10">
+                </div>
+                <div class="colunac_senha">
+                    <label for="c_senha">Confirme a senha</label>
+                    <input type="password" name="csenha" id="csenha" class="form-control" placeholder="Confirme sua senha" maxlength="10">
+                </div>
+            </div> 
+                <div class="status">
+                    <label for="status">Selecione o status</label>
+                    <select name="status" id="status" class="form-control" required>
+                        <option value="0">Selecione o status do usuário</option>
+                        <option value="Administrador">Adminitrador</option>
+                        <option value="Usuario">Usuário</option>
+                    </select>
+                </div>
+                <div class="cep">
+                    <label for="">Cep:
+                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+               onblur="pesquisacep(this.value);" /></label><br />
+                    <label>Rua:
+                    <input name="rua" type="text" id="rua" size="60" /></label><br />
+                    <label>Bairro:
+                    <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+                    <label>Cidade:
+                    <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+                    <label>Estado:
+                    <input name="uf" type="text" id="uf" size="2" /></label><br />
+                    <label>IBGE:
+                    <input name="ibge" type="text" id="ibge" size="8" /></label><br />
+                </div>
+                <button type="submit" class="btn" id="btnc" name="btnc">Cadastrar</button>
+            </form>
+            <hr>
+            <h1>Lista de Usuário</h1>
+
+            <table id="listTable" class="table table-stripped"></table>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="cep.js"></script>
+<script src="cad.js"></script>
